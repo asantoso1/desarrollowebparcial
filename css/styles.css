@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; 
+    transition: background-color 0.5s ease;
+}
+
+/*Uso de Grid para el diseño */
+.container {
+    max-width: 960px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/*Estilo para los botones*/
+.btn {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/*Pseudo-clase :hover */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Pseudo-clase :focus en el formulario */
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Pseudo-elemento ::before */
+h2::before {
+    content: "🚀 ";
+    color: #007bff;
+}
+
+/* Estilos de tabla moderna */
+.table th, .table td {
+    border-color: #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para la imagen de perfil con transicion */
+#profileImg {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out; /* 6. Transicion para la animacion */
+}
+
+/* Estilo para el contenedor de la API */
+#apiResult {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
